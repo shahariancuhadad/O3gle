@@ -1,0 +1,9 @@
+{% extends "base.html"%}
+
+
+{% block content %}
+    <h1>Hi, {{ user.username }}!</h1>
+    {% for stream in streams %}
+    <div><p>{{ stream.author.username }} says: <b>{{ stream.body }}</b></p></div>
+    {% endfor %}
+{% endblock %}
